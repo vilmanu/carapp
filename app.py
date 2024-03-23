@@ -1,12 +1,11 @@
 import pandas as pd
 import plotly.express as px
 import streamlit as st
-
+     
 car_data = pd.read_csv('vehicles_us.csv') # leer los datos
 st.header("Crea un grafico")
-build_histogram = st.checkbox('Construir un histograma')
 hist_button = st.button('Construir histograma') # crear un botón  
-
+build_histogram = st.checkbox('Construir un histograma')
 
 if build_histogram: # si la casilla de verificación está seleccionada
     st.write('Construir un histograma para la columna odómetro')    
@@ -31,3 +30,4 @@ if scatter_button: # al hacer clic en el botón
     # mostrar un gráfico Plotly interactivo
     st.plotly_chart(fig, use_container_width=True)
     
+
