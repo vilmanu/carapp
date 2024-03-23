@@ -3,7 +3,7 @@ import plotly.express as px
 import streamlit as st
      
 car_data = pd.read_csv('vehicles_us.csv') # leer los datos
-st.header("Crea un grafico")
+st.header("Crea un histograma")
 hist_button = st.button('Construir histograma') # crear un botón  
 build_histogram = st.checkbox('Construir un histograma')
 
@@ -18,7 +18,8 @@ if build_histogram: # si la casilla de verificación está seleccionada
         
     # mostrar un gráfico Plotly interactivo
         st.plotly_chart(fig, use_container_width=True)
-    
+
+st.header("Crea un grafico de dispersión")
 scatter_button = st.button('Construir grafico de dispersion') # crear un botón
 if scatter_button: # al hacer clic en el botón
     # ecribir un mensaje
